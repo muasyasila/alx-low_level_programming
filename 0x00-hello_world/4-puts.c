@@ -1,14 +1,12 @@
 #include <stdio.h>
+
 /**
-
- * main - Entry point
-
+ * main - print in the put function
  *
-
- * Return: Always 0 (Success)
-
+ *Description: using the main function
+ *this program prints "Programming is like bouilding puzzle"
+ * Return: 0
  */
-
 int main(void)
 
 {
