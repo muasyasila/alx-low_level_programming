@@ -1,29 +1,20 @@
 #include <stdio.h>
 
-
-
 /**
+ * main - print the string in the put function
  *
- *  * main - Entry point
- *
- *   *
- *
- *    * Return: Always 0 (Success)
- *
- *     */
-
+ * Description: using the main function
+ * this program prints "Programing is like building a multilingual puzzle" 
+ *Return: 0
+ */
 int main(void)
 
 {
 
 		int a;
-
 			long int b;
-
 				long long int c;
-
 					char d;
-
 						float f;
 
 
