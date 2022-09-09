@@ -4,15 +4,16 @@
  * main - print the string in the put function
  *
  * Description: using the main function
- * this program prints "Programing is like building a multilingual puzzle" 
+ * this program prints "Programing is like building a multilingual puzzle"
  * Return: 0
  */
+
 int main(void)
 {
-	char d;
 	int a;
 	long int b;
 	long long int c;
+	char d;
 	float f;
 
 	printf("Size of a char: %lu byte(s)\n", (unsigned long)sizeof(d));
