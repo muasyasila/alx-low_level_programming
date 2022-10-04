@@ -1,39 +1,46 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
- * alloc_grid - create a 2d integer grid using malloc.
- * Description: Each element of the grid should be initialized to 0.
- * @width: int size width
- * @height: int size height
- * Return: Pointer to new grid
+ * alloc_grid - Entry point
+ * @width: rows of matrix
+ * @height: columns of string
+ * Return: a pointer to a 2 dimensional array of integers or null
  */
-
 int **alloc_grid(int width, int height)
 {
-	int **grid;
-	int i, j;
+	int **matrix;
+	int i;
+	int j;
+	int l;
+	int *p;
 
-	if (width + height < 2 || width < 1 || height < 1)
+	if (width <= 0 || height <=0)
 		return (NULL);
-
-	grid = malloc(height * sizeof(*grid));
-	if (grid == NULL)
+	matrix = (int **)malloc(height * sizeof(int *));
+	if (matrix == NULL)
 		return (NULL);
-
 	for (i = 0; i < height; i++)
 	{
-		grid[i] = malloc(width * sizeof(**grid));
-		if (grid[i] == NULL)
+		*(matrix + i) = (int *)malloc(width * sizeof(int));
+		if (*(matrix + i) == NULL)
 		{
-			for (i--; i >= 0; i--)
-				free(grid[i]);
-			free(grid[i]);
+			for (i = 0; i < height; i++)
+			{
+				p = matrix[i];
+				free(p);
+			}
+			free(matrix);
 			return (NULL);
 		}
-		for (j = 0; j < width; j++)
-			grid[i][j] = 0;
 	}
-
-	return (grid);
+	for (l = 0; l < height; l++)
+	{
+		for (j = 0; j < width; j++)
+		{
+			matrix[l][j] = 0;
+		}
+	}
+	return (matrix);
 }
