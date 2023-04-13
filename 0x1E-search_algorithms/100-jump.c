@@ -3,23 +3,23 @@
 
 /* remember compiling math.h with gcc requires `-lm` */
 
-size_t min(size_t a, size_t b);
+size_t min(size_t ra, size_t zb);
 
 /**
  * min - returns the minimum of two size_t values
- * @a: first value
- * @b: second value
+ * @ra: first value
+ * @zb: second value
  *
- * Return: `a` if lower or equal to `b`, `b` otherwise
+ * Return: `ra` if lower or equal to `zb`, `zb` otherwise
  */
-size_t min(size_t a, size_t b)
+size_t min(size_t ra, size_t zb)
 {
-	return (a <= b ? a : b);
+	return (ra <= zb ? ra : zb);
 }
 
 /**
  * jump_search - searches for a value in a sorted array of integers using
- * a jump search algorithm
+ * ra jump search algorithm
  * @array: pointer to first element of array to search
  * @size: number of elements in array
  * @value: value to search for
