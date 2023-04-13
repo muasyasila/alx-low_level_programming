@@ -7,7 +7,7 @@
 /**
  * struct listint_s - singly linked list
  *
- * @z: Integer
+ * @z1: Integer
  * @index: Index of the node in the list
  * @next: Pointer to the next node
  *
@@ -15,7 +15,7 @@
  */
 typedef struct listint_s
 {
-    int z;
+    int z1;
     size_t index;
     struct listint_s *next;
 } listint_t;
@@ -23,7 +23,7 @@ typedef struct listint_s
 /**
  * struct skiplist_s - Singly linked list with an express lane
  *
- * @z: Integer
+ * @z1: Integer
  * @index: Index of the node in the list
  * @next: Pointer to the next node
  * @express: Pointer to the next node in the express lane
@@ -32,7 +32,7 @@ typedef struct listint_s
  */
 typedef struct skiplist_s
 {
-    int z;
+    int z1;
     size_t index;
     struct skiplist_s *next;
     struct skiplist_s *express;
